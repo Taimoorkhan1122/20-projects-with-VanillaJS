@@ -39,6 +39,7 @@ p {
   font-size: 12px;
   border-radius: 5px;
   padding: 5px 12px;
+  border: none;
 }
 
 .currency {
