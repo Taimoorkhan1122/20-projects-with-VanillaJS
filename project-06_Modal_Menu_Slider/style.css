@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+
+:root {
+  --primary-color: #993955;
+  --secondary-color: #ae76a6;
+  --tertiary-color: #f7f4f3;
+  --border-color: rgba(255, 255, 255, 0.74);
+  --duration: 1s;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+}
+
+nav {
+  background-color: var(--primary-color);
+  border-right: 2px solid var(--border-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+  width: 200px;
+  height: 100vh;
+  transform: translateX(-100%);
+  z-index: 100;
+}
+
+nav .logo img {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+}
+
+nav .logo {
+  padding: 30px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  border-bottom: 2px solid var(--border-color);
+  padding: 25px;
+}
+
+nav ul li:first-of-type {
+  border-top: 2px solid var(--border-color);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--tertiary-color);
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background-color: var(--primary-color);
+  font-size: 130%;
+  padding: 40px 15px;
+  text-align: center;
+  color: var(--tertiary-color);
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 30px 0;
+}
+
+button,
+input[type="submit"] {
+  background-color: var(--secondary-color);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  padding: 8px 12px;
+}
+
+button:focus {
+  outline: none;
+}
+
+.toggle {
+  background: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.open {
+  padding: 12px 30px;
+  font-size: 20px;
+}
+
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* display: none; */
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.modal-container.show-modal {
+  display: block;
+}
+
+.modal {
+  width: 400px;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  background-color: var(--tertiary-color);
+  animation-name: modal-opener;
+  animation-duration: var(--duration);
+  overflow: hidden;
+}
+.modal-header {
+  background-color: var(--primary-color);
+  color: var(--tertiary-color);
+  padding: 15px;
+}
+
+h3 {
+  margin: 0;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-form div {
+  margin-bottom: 15px;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  color: rgb(75, 74, 74);
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 25px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modal-form input[type="submit"] {
+  width: 100%;
+  text-align: center;
+  font-size: 16px;
+}
