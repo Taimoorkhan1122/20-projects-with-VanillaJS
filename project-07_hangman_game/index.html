@@ -32,13 +32,7 @@
 
       <!-- wrong letters container -->
       <div class="wrong-letters-container">
-        <div class="wrong-letters">
-          <p>Wrong Letters</p>
-          <span>d</span>
-          <span>g</span>
-          <span>j</span>
-          <span>l</span>
-        </div>
+        <div id="wrong-letters" class="wrong-letters"></div>
       </div>
 
       <!-- Final word -->
@@ -51,16 +45,17 @@
     </div>
 
     <!-- Popup Container -->
-    <div class="popup-container">
+    <div id="popup-container" class="popup-container">
       <div class="popup">
-        <h2>Congratulations! You Won</h2>
-        <button class="play-again">Play again</button>
+        <h2 id="final-message">Congratulations! You Won</h2>
+        <button id="play-again" class="play-again">Play again</button>
       </div>
     </div>
 
     <!-- Notification Container -->
-    <div class="notification">
+    <div id="notification" class="notification">
       <p>You have already typed this word</p>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
