@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: raleway;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+h2 {
+    font-size: 28px;
+    line-height: 32.86px;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+}
+
+p {
+    font-size: 24px;
+    text-align: justify;
+    font-weight: normal;
+    margin: 0 0 20px 0;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+nav {
+    display: inline-block;
+    width: 100%;
+    position: absolute;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+nav .navigation {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+nav .navigation li {
+    list-style-type: none;
+}
+
+nav .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+nav .buttons li{
+    margin: 10px;
+    color: #fff;
+}
+nav .navigation .logo li a h1{
+    color: #000;
+    font-size: 62px;
+}
+
+nav .navigation .logo li a h1 .yellow{
+    color: #FFE600;
+    font-size: 62px;
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.container .container2 .image img {
+    width: 730px;
+    height: 876px;
+}
+
+.container .content {
+    margin: 120px 20px 0 20px;
+
+}
+
+
+.container .content .ingredients .tags{
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+}
+
+.container .content .ingredients .tags p {
+    width: 150;
+    height: 40px;
+    background-color: #000;
+    border-radius: 15px;
+    color: #fff;
+    padding: 5px 10px;
+    margin-right:5px;
+} 
