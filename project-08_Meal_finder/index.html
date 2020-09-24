@@ -38,12 +38,12 @@
     <div class="container">
       <div class="content">
         <div class="headings">
-          <h1>Name of Meal</h1>
-          <h2>Details of meal | Origin of meal</h2>
+          <h1 id="nameOfMeal">Name of Meal</h1>
+          <h2 id="details">Details of meal | Origin of meal</h2>
         </div>
         <article>
           <h2>Recipe</h2>
-          <p>
+          <p id="recipe">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
             aliquet, nunc cursus tincidunt dignissim, massa dui finibus eros, eu
             tincidunt neque erat eu elit. Integer massa mi, aliquet ac quam non,
@@ -68,29 +68,37 @@
       </div>
       <div class="container2" id="container2">
         <div class="image">
-          <img src="./images/pancakes.jpg" alt="" width="100%" />
+          <img src="./images/pancakes.jpg" alt="" />
+          <div class="searchImg" id="searchImg">
+            <a><img src="./images/pancakes.jpg" alt="" /></a>
+            <a><img src="./images/pancakes.jpg" alt="" /></a>
+            <a><img src="./images/pancakes.jpg" alt="" /></a>
+          </div>
         </div>
         <div class="search-container">
           <div class="search-bar" id="search">
-            <div class="input">
-              <input type="text" placeholder="Search meal here" />
-            </div>
-            <span>
-              <a href="#">
-                <i class="fa fa-search fa-2x"></i>
-              </a>
-            </span>
+            <form>
+              <input type="text" id="input" placeholder="Search meal here" />
+              <button type="submit" id="submit">
+                <a href="#">
+                  <i class="fa fa-search fa-2x"></i>
+                </a>
+              </button>
+            </form>
             <!-- Random button -->
           </div>
           <div class="random" id="random">
             <span>
-              <a href="">
-                <i class="fa fa-random fa-2x"></i>
-              </a>
+              <button id="random">
+                <a href="">
+                  <i class="fa fa-random fa-2x"></i>
+                </a>
+              </button>
             </span>
           </div>
         </div>
       </div>
     </div>
+    <script src="./script.js"></script>
   </body>
 </html>
