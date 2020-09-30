@@ -1,5 +1,5 @@
 const input = document.getElementById("input");
-const random = document.getElementById("random");
+const random = document.getElementById("random-btn");
 const recipeEl = document.getElementById("recipe");
 const submit = document.getElementById("submit");
 const mealName = document.getElementById("nameOfMeal");
@@ -54,7 +54,9 @@ function searchMeal(e) {
   // clear Items
   recipeEl.innerHTML = "";
   mealName.innerHTML = "";
+  mealDetails.innerHTML = "";
   image.innerHTML = "";
+  ingredients.innerHTML = "";
 
   // Get search Item
   const term = input.value;
@@ -92,5 +94,43 @@ function searchMeal(e) {
   }
 }
 
+// Get RandomMeal
+function getRandomMeal() {
+  recipeEl.innerHTML = "";
+  mealName.innerHTML = "";
+  image.innerHTML = "";
+
+  fetch("https://www.themealdb.com/api/json/v1/1/random.php")
+    .then((res) => res.json())
+    .then((data) => {
+      // let id;
+      // for (const meal of data.meals) {
+      //   id = meal.idMeal;
+      // }
+      // updateRecipe(id);
+
+      if (data.meals === null) {
+        mealName.innerHTML = `<h1>No Meal Found<h1/>`;
+      } else {
+        image.innerHTML = data.meals.map(
+          (meal) => `
+          <div class="meals">
+            <a href="#">
+              <img onclick="updateRecipe(${meal.idMeal})" 
+              src="${meal.strMealThumb}" 
+              alt="${meal.strMeal}" />
+            </a>
+            <h3>${meal.strMeal}</h3>
+          </div>
+        `
+        );
+        mealName.innerHTML = "Seleact A Meal";
+        recipeEl.innerHTML = `<p>Please Select A dish to get the recipe</p>`;
+        ingredients.innerHTML = "";
+      }
+    });
+}
+
 // Event listeners
 submit.addEventListener("click", searchMeal);
+random.addEventListener("click", getRandomMeal);
