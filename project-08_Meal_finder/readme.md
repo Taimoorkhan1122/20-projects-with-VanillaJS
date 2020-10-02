@@ -7,5 +7,5 @@
 - Working with Template literals
 
 # Live Project Link
-<a href="https://codepen.io/Taimoorkhan/full/NWNJdoL">MealFinder</a>
+<a href="https://codepen.io/Taimoorkhan/full/NWNJdoL" target="_blank">MealFinder</a>
     
