@@ -125,6 +125,13 @@ li.plus {
     border-right: 3px solid #2ecc71;
 }
 
+.history {
+    max-height: 300px;
+    overflow: auto;
+    padding: 0 8px 0 20px;
+    margin: 0;
+}
+
 .delete-btn {
     cursor: pointer;
     background-color: #e74c3c;
